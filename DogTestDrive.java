@@ -47,6 +47,7 @@ public class DogTestDrive{
         c.set(c.HOUR,-5);
         out.println(c.getTime());
         out.println(t);
+        System.out.println("hello 3");
         //Scanner cin=new Scanner(System.in);
          
         
