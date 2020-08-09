@@ -11,6 +11,7 @@ String time_str = String.format("%tr", time);//这里%tr和c语言printf里面�
 //下面使用Calendar输出
 Calendar cal = new Calendar;//错误！，这是抽象类
 Calendar cal = Calendar.getInstance();//调用静态方法获得Calendar子类
+//建立完成后cal里面内容不会自动改变，时间内容就是建立的时刻
 
 //年份
 cal.get(Calendar.YEAR);
