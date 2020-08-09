@@ -1,0 +1,56 @@
+//Date
+Date time = new Date();//创建date
+String time_str = String.format("%tr", time);//这里%tr和c语言printf里面的东西一个意思，调用了String的静态方法
+//%tc输出所有内容，%tA周几，%tB月份，%td日期，用处很小，请看下面两个方式
+
+
+
+
+
+
+//下面使用Calendar输出
+Calendar cal = new Calendar;//错误！，这是抽象类
+Calendar cal = Calendar.getInstance();//调用静态方法获得Calendar子类
+
+//年份
+cal.get(Calendar.YEAR);
+
+/*Calendar.MONTH ，这是一个特殊于日历的值。
+在格里高利历和罗马儒略历中一年中的第一个月是 JANUARY，它为 0；最后一个月取决于一年中的月份数。
+所以这个值的初始值为0，所以我们用它来表示日历月份时需要加1*/
+cal.get(Calendar.MONTH)+1;
+
+//每月的几号
+cal.get(Calendar.DATE);
+
+//时
+cal.get(Calendar.HOUR_OF_DAY);//24小时制
+cal.get(Calendar.HOUR);//12小时制
+
+//分
+cal.get(Calendar.MINUTE);
+
+//秒
+cal.get(Calendar.SECOND);
+
+//Calendar还可以有其他，比如DAY_OF_YEAR，DAY_OF_WEEK（同month一样需要+1）等
+
+
+
+
+
+
+
+
+//以下来源https://blog.csdn.net/m0_38061421/article/details/100540639
+String d1,d2,d3,d4;
+DateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.UK);
+DateFormat fmt = new SimpleDateFormat("yyyy年MM月dd日");
+DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+DateFormat format2 = new SimpleDateFormat("yyyyMMddHHmmss");
+
+Date date = new Date();
+d1 = df.format(date);     // 转换成英文的格式
+d2 = fmt.format(date);     // 转换成 X年X月X日
+d3 = format1.format(date); // 转换成 yyyy-MM-dd
+d4 = format2.format(date); // 转换成 yyyyMMddHHmmss

@@ -42,10 +42,12 @@ class my extends i{
 public class DogTestDrive{
     public static void main(String[] args){
         Calendar c = Calendar.getInstance();
-        System.out.println(c.getTime());
+        //Date time = new Date();//创建date
+        //System.out.println(c.getTime());
         long t = c.getTimeInMillis();
-        c.set(c.HOUR,-3);
-        out.println(c.getTime());
+        out.println(c.get(Calendar.MINUTE));
+        out.println(c.get(Calendar.SECOND));
+        out.println(c.get(Calendar.DAY_OF_WEEK));
         out.println(t);
         //Scanner cin=new Scanner(System.in);
          
