@@ -3,12 +3,15 @@ Date time = new Date();//创建date
 String time_str = String.format("%tr", time);//这里%tr和c语言printf里面的东西一个意思，调用了String的静态方法
 //%tc输出所有内容，%tA周几，%tB月份，%td日期，用处很小，请看下面两个方式
 
+ 
+
+ 
 
 
+//下面使用Calendar输出，导入Calendar
 
+import java.util.Calendar;
 
-
-//下面使用Calendar输出
 Calendar cal = new Calendar;//错误！，这是抽象类
 Calendar cal = Calendar.getInstance();//调用静态方法获得Calendar子类
 //建立完成后cal里面内容不会自动改变，时间内容就是建立的时刻
@@ -36,11 +39,15 @@ cal.get(Calendar.SECOND);
 
 //Calendar还可以有其他，比如DAY_OF_YEAR，DAY_OF_WEEK（同month一样需要+1）等
 
+//给个输出格式例子（时：分：秒）：
 
+String nowTime =  cal.get(Calendar.HOUR_OF_DAY) + ":" + cal.get(Calendar.MINUTE) + ":" + cal.get(Calendar.SECOND);
 
+//需要注意：cal.get()返回类型是int
 
+ 
 
-
+ 
 
 
 //以下来源https://blog.csdn.net/m0_38061421/article/details/100540639
@@ -51,7 +58,9 @@ DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 DateFormat format2 = new SimpleDateFormat("yyyyMMddHHmmss");
 
 Date date = new Date();
-d1 = df.format(date);     // 转换成英文的格式
-d2 = fmt.format(date);     // 转换成 X年X月X日
+d1 = df.format(date); // 转换成英文的格式
+d2 = fmt.format(date); // 转换成 X年X月X日
 d3 = format1.format(date); // 转换成 yyyy-MM-dd
 d4 = format2.format(date); // 转换成 yyyyMMddHHmmss
+
+ 
