@@ -3,7 +3,7 @@
 //创建一个自定义监听器
  private btnlistener btnl = new btnlistener();
 
- //必须在一个btn创建后才添加监听器，即在类里面无法添加，构造函数可以(java version "14.0.2" 2020-07-14)
+ //必须在一个btn创建后才添加监听器，即在类里面无法添加但构造函数可以
  btn.addActionListener(btnl);
 
  //自定义监听器的内容

@@ -54,6 +54,7 @@ label.setToolTipText(String str)
 ### 设置水平对齐方式
 `label.setHorizontalAlignment(int alignment)`
 官方参数:
+
 - SwingConstants.LEFT：左对齐；（默认值，也就是不设置时则左对齐）
 - SwingConstants.CENTER：居中对齐；
 - SwingConstants.RIGHT：右对齐；
